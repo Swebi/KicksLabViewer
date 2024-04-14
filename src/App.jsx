@@ -205,7 +205,7 @@ export default function App() {
         />
       </Canvas>
       <div className=" flex flex-col justify-evenly items-center  w-screen md:w-[280px]  h-[50vh] md:h-screen  p-2 px-8 gap-2 md:gap-0 md:p-8  bg-gray-100 overflow-y-visible 	 ">
-        <div className="flex justify-center items-center gap-2">
+        <div className="flex justify-center items-center gap-4">
           <h1 className=" text-3xl md:text-6xl font-medium pointer-events-none select-none	  ">
             Kicks Lab
           </h1>
