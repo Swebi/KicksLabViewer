@@ -1,8 +1,16 @@
-# React + Vite
+# Kicks Lab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A 3D Shoe Configurator\
+Made Using React Three Fiber, ThreeJS, Valtios, TailwindCSS
 
-Currently, two official plugins are available:
+## Screenshots:
+![alt text](image.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+### References:
+[YouTube - Yuri Artiukh](https://youtu.be/xy_tbV4pC54?si=exkTSvEjtrsDwA_P)\
+[Reference Code](https://codesandbox.io/p/sandbox/shoe-configurator-qxjoj?)\
+[React Three Fiber Docs](https://docs.pmnd.rs/react-three-fiber/getting-started/examples)\
+[ThreeJS Docs](https://threejs.org/docs/)\
+[ThreeJS Forum](https://discourse.threejs.org/)
+
