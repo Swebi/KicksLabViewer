@@ -4,8 +4,7 @@ A 3D Shoe Configurator\
 Made Using React Three Fiber, ThreeJS, Valtios, TailwindCSS
 
 ## Screenshots:
-![alt text](image.png)
-
+![alt text](image-1.png)
 
 ### References:
 [YouTube - Yuri Artiukh](https://youtu.be/xy_tbV4pC54?si=exkTSvEjtrsDwA_P)\
