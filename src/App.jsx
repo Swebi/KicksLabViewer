@@ -150,7 +150,7 @@ function Picker() {
         onChange={(color) => (state.items[snap.current] = color)}
       />
 
-      <h1 className="text-6xl font-semibold capitalize">
+      <h1 className="text-3xl md:text-6xl font-semibold capitalize">
         {snap.current ? snap.current : "Choose"}
       </h1>
     </div>
@@ -169,11 +169,13 @@ export default function App() {
     a.click();
   }
 
+  let initialPosition = window.innerWidth < 450 ? [0, 0, 4.75] : [0, 0, 3.25];
+
   return (
     <div className="flex flex-col md:flex-row justify-center items-center w-screen h-screen bg-gray-200 overflow-x-hidden">
       <Canvas
         shadows
-        camera={{ position: [0, 0, 3.25], fov: 45 }}
+        camera={{ position: initialPosition, fov: 45 }}
         ref={ref}
         gl={{ preserveDrawingBuffer: true }}
       >
@@ -202,7 +204,7 @@ export default function App() {
       </Canvas>
       <div className=" flex flex-col  justify-evenly h-[200px] w-screen md:w-[280px] md:h-screen   bg-gray-100  ">
         <Picker />
-        <button
+        {/* <button
           className=" m-4 text-2xl"
           onClick={() => {
             console.log(state.items.band);
@@ -211,7 +213,7 @@ export default function App() {
           }}
         >
           Proceed
-        </button>
+        </button> */}
 
         <button
           className=" m-4 pb-10 text-2xl"
