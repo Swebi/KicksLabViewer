@@ -8,6 +8,7 @@ import {
 } from "@react-three/drei";
 import { proxy, useSnapshot } from "valtio";
 import { HexColorPicker } from "react-colorful";
+import { IoLogoGithub } from "react-icons/io";
 
 const state = proxy({
   current: null,
@@ -141,16 +142,15 @@ function Shoe(props) {
 function Picker() {
   const snap = useSnapshot(state);
   return (
-    <div className=" flex  flex-row md:flex-col border gap-4 p-10  justify-center items-center bg-gray-100 rounded-xl">
+    <div className=" flex  flex-row md:flex-col  gap-8  justify-center items-center  bg-gray-100 rounded-xl">
       {/* Snap is the state from valtio, in that object, choosing the .items and in the items object chosing the color of the current chosen by [current]
       bascially for the color picker to show the color of the current selected object on the shoe*/}
       <HexColorPicker
-        className="shadow-lg"
         color={snap.items[snap.current]}
         onChange={(color) => (state.items[snap.current] = color)}
       />
 
-      <h1 className="text-3xl md:text-6xl font-semibold capitalize">
+      <h1 className="text-3xl md:text-5xl font-extralight capitalize">
         {snap.current ? snap.current : "Choose"}
       </h1>
     </div>
@@ -169,10 +169,10 @@ export default function App() {
     a.click();
   }
 
-  let initialPosition = window.innerWidth < 450 ? [0, 0, 4.75] : [0, 0, 3.25];
+  let initialPosition = window.innerWidth < 500 ? [0, 0, 4.5] : [0, 0, 3.25];
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center w-screen h-screen bg-gray-200 overflow-x-hidden">
+    <div className="flex flex-col md:flex-row justify-center  items-center w-screen h-screen bg-gray-200 overflow-x-hidden">
       <Canvas
         shadows
         camera={{ position: initialPosition, fov: 45 }}
@@ -202,21 +202,18 @@ export default function App() {
           enableZoom={false}
         />
       </Canvas>
-      <div className=" flex flex-col  justify-evenly h-[200px] w-screen md:w-[280px] md:h-screen   bg-gray-100  ">
+      <div className=" flex flex-col justify-evenly items-center h-[200px] w-screen md:w-[280px] md:h-screen p-8  bg-gray-100  ">
+        <h1 className="text-6xl font-medium flex justify-center items-center gap-2">
+          Kicks Lab
+          <a href="https://github.com/Swebi/KicksLab">
+            <IoLogoGithub size={50} />
+          </a>
+        </h1>
+
         <Picker />
-        {/* <button
-          className=" m-4 text-2xl"
-          onClick={() => {
-            console.log(state.items.band);
-            console.log(state.items.sole);
-            console.log(state.items.mesh);
-          }}
-        >
-          Proceed
-        </button> */}
 
         <button
-          className=" m-4 pb-10 text-2xl"
+          className=" m-4 p-5 px-8 shadow-lg rounded-full  border text-2xl"
           onClick={() => {
             orbitref.current.reset();
             setTimeout(() => {
@@ -226,6 +223,8 @@ export default function App() {
         >
           Download
         </button>
+
+        <h1 className="text-sm font-light">Made By Suhayb</h1>
       </div>
     </div>
   );
